@@ -12,6 +12,7 @@ class Car
   public int $wieght;
   public string $color;
 
+  // set
   public function setMaker(string $maker): void
   {
     $this->maker = $maker;
@@ -42,10 +43,52 @@ class Car
     $this->power = $power;
   }
 
-  public function drivingSpeed(): void
+  public function setWieght(int $wieght): void
   {
-    // получаем скорость авто
-    $this->speed = sqrt( (2 * $this->power) / $this->wieght);
+    $this->wieght = $wieght;
   }
 
+
+  // get
+  public function getMaker(): string
+  {
+    return $this->maker;
+  }
+
+  public function getModel(): string
+  {
+    return $this->model;
+  }
+
+  public function getDateCreate(): int
+  {
+    return $this->dateCreate;
+  }
+
+  public function getMileage(): int
+  {
+    return $this->mileage;
+  }
+
+  public function getColor(): string
+  {
+    return $this->color;
+  }
+
+  public function getPower(): int
+  {
+    return $this->power;
+  }
+
+  public function getWieght(): int
+  {
+    return $this->wieght;
+  }
+
+  // other
+  public function drivingSpeed(): void
+  {
+    // получаем и записываем скорость авто
+    $this->speed = sqrt( (2 * $this->power) / $this->wieght);
+  }
 }

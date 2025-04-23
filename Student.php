@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 
-class Spudent
+class Student
 {
   public string $name;
   public string $surname;
@@ -11,7 +11,7 @@ class Spudent
   public int $course;
   public int $timeLerning;
 
-
+  // set
   public function setName(string $name): void
   {
     $this->name = ucfirst($name);
@@ -37,6 +37,35 @@ class Spudent
     $this->course = $course;
   }
 
+
+  // get
+  public function getName(): string
+  {
+    return $this->name;
+  }
+
+  public function getSurname(): string
+  {
+    return $this->surname;
+  }
+
+  public function getFaculty(): string
+  {
+    return $this->faculty;
+  }
+
+  public function getAge(): int
+  {
+    return $this->age;
+  }
+
+  public function getCourse(): int
+  {
+    return $this->course;
+  }
+
+
+  // other
   public function lerningTime (int $time): int
   {
     return $this->timeLerning + $time;

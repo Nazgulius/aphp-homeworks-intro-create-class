@@ -4,12 +4,18 @@ declare(strict_types=1);
 // вариант 1 работает
 // include 'Student.php';
 // include './cars/Car.php';
-// include './market/tehnical/Tv.php';
+// include './market/technique/Tv.php';
 
 
-// вариант 2 нет
+// вариант 2 работает с ошибками
 // spl_autoload_register(function ($class_name) {
 //   include $class_name . '.php';
+// });
+// spl_autoload_register(function ($class_name) {
+//   include './cars/' . $class_name . '.php';
+// });
+// spl_autoload_register(function ($class_name) {
+//   include './market/technique/' . $class_name . '.php';
 // });
 
 // вариант 3 работает
@@ -28,7 +34,7 @@ $obj2 = new Car();
 $obj2->setModel('Volvo');
 $obj2->setDateCreate(2020);
 
-echo 'This car' . $obj2->getModel() . ', ' . $obj2->getDateCreate() . ' age' . PHP_EOL;
+echo 'This car ' . $obj2->getModel() . ', ' . $obj2->getDateCreate() . ' age' . PHP_EOL;
 
 $obj3 = new Tv();
 $obj3->setModel('SONY');
